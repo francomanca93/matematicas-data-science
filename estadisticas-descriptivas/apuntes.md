@@ -20,6 +20,7 @@
   - [Desviación estándar](#desviación-estándar)
     - [Distribución normal](#distribución-normal)
   - [Medidas de dispersión en Python](#medidas-de-dispersión-en-python)
+    - [Asimetría en distribuciones](#asimetría-en-distribuciones)
   - [Exploración visual de los datos](#exploración-visual-de-los-datos)
   - [Diagramas de dispersión en el análisis de datos](#diagramas-de-dispersión-en-el-análisis-de-datos)
 - [Estadística en la ingesta de datos](#estadística-en-la-ingesta-de-datos)
@@ -269,8 +270,27 @@ Se definen los límites de la siguiente manera:
 
 Donde $f$ y $g$ son una función cualquiera que dependa del rango intercuartil.
 
-
 ## Medidas de dispersión en Python
+
+Notebook ejercitando los conceptos de medidas de dispersión en Python --> [[clase-10]medidas-dispersion](clases_notebooks/[clase-10]medidas-dispersion.ipynb)
+
+### Asimetría en distribuciones
+
+El hecho de que nuestra distribución tenga una tendencia a la derecha o a izquierda nos representa un problema, ya que no a acorde con una distribución y eso puede afectar a nuestros análisis si no tomamos en cuenta ese sesgo. No siempre hay que confiar en nuestra intuición o lo que vemos a simple vista, hay métodos como:
+
+- Primer coeficiente de asimetría de Pearson (asimetría de modo)
+- Segundo coeficiente de asimetría de Pearson (asimetría mediana)
+- Coeficiente de Groeneveld y Meeden
+- Coeficiente de Fisher
+- Entre otros. Buscar en Google.
+
+Y por último, no hay que olvidar la **curtosis**:
+Una curtosis grande implica una mayor concentración de valores de la variable tanto muy cerca de la media de la distribución (pico) como muy lejos de ella (colas), al tiempo que existe una relativamente menor frecuencia de valores intermedios. Esto explica una forma de la distribución de frecuencias/probabilidad con colas más gruesas, con un centro más apuntado y una menor proporción de valores intermedios entre el pico y colas.
+Una mayor curtosis no implica una mayor varianza, ni viceversa.
+
+[Curtosis explicada en detalle](https://www.youtube.com/watch?v=gt6bpsGGp44)
+
+
 ## Exploración visual de los datos
 ## Diagramas de dispersión en el análisis de datos
 
