@@ -196,6 +196,22 @@ Por lo tanto deberemos tener en cuenta la mediana tambien cuando sepamos o sospe
 Notebook ejercitando los conceptos medidas de tendencia central en Python --> [[clase-07]medidas-central](clases_notebooks/[clase-07]medidas-central.ipynb)
 
 ## Medidas de dispersion
+
+Las medidas de dispersión, también llamadas medidas de variabilidad, muestran la variabilidad de una distribución, indicando por medio de un número, si las diferentes puntuaciones de una variable están muy alejadas de la media. Cuanto mayor sea ese valor, mayor será la variabilidad, cuanto menor sea, más homogénea será. Así se sabe si todos los casos son parecidos o varían mucho entre ellos.
+
+- **Rango**: El Rango es el intervalo entre el valor máximo y el valor mínimo.
+- **Cuartiles**: Los cuartiles son valores que dividen una muestra de datos en cuatro partes iguales.
+  - **1er cuartil (Q1)**: 25% de los datos es menor que o igual a este valor.
+  - **2do cuartil (Q2)**: La mediana. 50% de los datos es menor que o igual a este valor.
+  - **3er cuartil (Q3)**: 75% de los datos es menor que o igual a este valor.
+- **Rango intercuartil**: La distancia entre el primer 1er cuartil y el 3er cuartil (Q3-Q1); de esta manera, abarca el 50% central de los datos.
+
+- [**Desviacion estandar**: Siguiente seccion](#desviación-estándar)
+
+**Diagrama de caja o box plot**: representa gráficamente una serie de datos numéricos a través de sus cuartiles. De esta manera, el diagrama de caja muestra a simple vista la mediana y los cuartiles de los datos. También puede representar los valores atípicos de estos.
+
+![representacion-rango-q](https://imgur.com/FmA5v7p.png)
+
 ## Desviación estándar
 ## Medidas de dispersión en Python
 ## Exploración visual de los datos
