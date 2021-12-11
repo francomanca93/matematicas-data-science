@@ -165,6 +165,32 @@ Los pasos para obtener los valores son:
 ![diagrama-de-frecuencia](https://imgur.com/miKIn32.png)
 
 ## Metáfora de Bill Gates en un bar
+
+**Calculo de la media aritmetica**
+![media](https://imgur.com/DqXTMsn.png)
+
+**Calculo de la mediana**
+
+![mediana](https://imgur.com/3OmISxi.png)
+
+
+Resumen de la metafora de BIll Gates:
+
+Caso 1:
+Tenemos 11 personas con un salario de 35k USD anuales, el promedio y la mediana seran iguales, de 35k USD.
+![caso1](https://imgur.com/O5P3gnB.png)
+
+Caso 2:
+Si llega un caso atípico, ejemplo Bill Gates y se sienta con estas 11 personas, y su salario es por ejemplo de 1M USD anuales, la media se dispersa abruptamente y no nos representa a toda la población de estudio.
+![caso2-media-atipica](https://imgur.com/IiNfZUK.png)
+
+Por lo tanto deberemos tener en cuenta la mediana tambien cuando sepamos o sospechemos que tenemos valores atípicos y con ello poder comprar.
+![caso2-mediana](https://imgur.com/NRVbcdv.png)
+
+- Esta metáfora nos muestra que al tener valores atípicos nuestra media se vera sesgada o desviada.
+- La mediana será un mejor valor para manejar un conjunto de datos con valores atípicos.
+- Ejemplo: Por esto hablar del ingreso per cápita de un país es equivocado si no lo acompañamos con otros indices que nos midan la distribucion de la riqueza, como por ejemplo el indice de Gini o nos aportan el valor de la mediana para sacar nuestras conclusiones.
+
 ## Medidas de tendencia central en Python
 ## Medidas de dispersion
 ## Desviación estándar
