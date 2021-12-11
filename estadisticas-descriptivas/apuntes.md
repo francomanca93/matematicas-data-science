@@ -25,6 +25,7 @@
   - [Diagramas de dispersión en el análisis de datos](#diagramas-de-dispersión-en-el-análisis-de-datos)
 - [Estadística en la ingesta de datos](#estadística-en-la-ingesta-de-datos)
   - [Pipelines de procesamiento para variables numéricas](#pipelines-de-procesamiento-para-variables-numéricas)
+    - [Escalamiento lineal (Normalización)](#escalamiento-lineal-normalización)
   - [Transformación no lineal](#transformación-no-lineal)
   - [Procesamiento de datos numéricos en Python](#procesamiento-de-datos-numéricos-en-python)
   - [Pipelines de procesamiento para variables categóricas](#pipelines-de-procesamiento-para-variables-categóricas)
@@ -320,6 +321,61 @@ Notebook realizando diagramas de dispersión para usos de análisis de datos en 
 # Estadística en la ingesta de datos
 
 ## Pipelines de procesamiento para variables numéricas
+
+Llamamos pipeline a una secuencia de procesamiento de datos que permite optimizar mi flujo de trabajo. Estos son comunes en machine learning pues no solo permiten la manipulación y transformación de multiples datos, sino que además tenemos una alta reducción en código. Este consiste en encadenar una serie de estimadores, que me permiten ir trasformando un conjunto de datos en un proceso comprendido por varias etapas de manera secuencial, donde cada componente del pipeline toma los datos, los trasforma y su salida va a la siguiente componente del pipeline, dandose esto hasta pasar por todas las componentes de éste.
+
+### Escalamiento lineal (Normalización)
+
+Pipeline: Distribucion simetrica? Si --> Aplico escalamiento lineal
+
+La normalización es una técnica que a menudo se aplica como parte de la preparación de datos para el aprendizaje automático. **El objetivo de la normalización es cambiar los valores de las columnas numéricas en el conjunto de datos para usar una escala común, sin distorsionar las diferencias en los rangos de valores ni perder información**. La normalización también es necesaria para que algunos algoritmos modelen los datos correctamente.
+
+Por ejemplo, suponga que su conjunto de datos de entrada contiene una columna con valores que van de 0 a 1 y otra columna con valores que van de 10,000 a 100,000. La gran diferencia en la escala de los números podría causar problemas al intentar combinar los valores como características durante el modelado.
+
+La normalización evita estos problemas al crear nuevos valores que mantienen la distribución general y las proporciones en los datos de origen, mientras mantienen los valores dentro de una escala aplicada en todas las columnas numéricas utilizadas en el modelo.
+
+Tenemos varias opciones para transformar datos numéricos:
+
+- Cambiar todos los valores a una escala de 0 a 1 o transformar los valores representándolos como rangos de percentiles en lugar de valores absolutos.
+- Aplicar la normalización a una sola columna o a varias columnas en el mismo conjunto de datos.
+- Si necesita repetir el experimento o aplicar los mismos pasos de normalización a otros datos, puede guardar los pasos como una transformación de normalización y aplicarlos a otros conjuntos de datos que tengan el mismo esquema.
+
+> Nota importante: Algunos algoritmos requieren que los datos se normalicen antes de entrenar un modelo. Otros algoritmos realizan su propia normalización o escalado de datos.
+
+Algunas preguntas que nos podemos hacer:
+
+**¿Por qué usarlo?** --> Porque los modelos de machine learning son eficientes en el rango [-1, 1].
+
+**¿Hay diferentes tipos?**
+
+- max-min
+
+$$x_s=\frac{2x-\max - \min}{\max - \min}$$
+
+- **Clipping:** se toma la distribución y se le define un límite superior e inferior. Los valores que superen el límite superior se "colapsan", es decir se convierten en el valor del límite. Los valores que estén por debajo del límite inferior se colapsan en el valor del límite inferior. ***Ejemplo:***
+    - Se define como **límite inferior** 2.0
+    - Se define como **límite superior** 4.0
+    
+    $$x_s = 3.8 \to 3.8 \\
+    6.0 \to 4.0 \\
+    1.0 \to 2.0$$
+    
+    Los valores que no sobrepasen el rango permanecen igual, los valores que superen los límites se colapsan en el límite definido.
+    
+    Este método tiene una desventaja y es que omite datos que pueden ser útiles para el modelo aunque sean outliers. Por esta razón no se recomienda mucho usar este escalador.
+    
+- **Winsorizing:** es algo muy similar al clipping, solo que los límites se definen con base en los percentiles.
+- **Z-Score**: se tiene un conjunto de datos {x_1,...,x_n} al que se le calcula mu y sigma. Para normalizar los datos se hace lo siguiente:
+
+$$x_s=\frac{x-\mu}{\sigma}$$
+
+![z-score](https://imgur.com/v9pTbrZ.png)
+
+> Más información en la [Documentación de Normalization de Google Developers](https://developers.google.com/machine-learning/data-prep/transform/normalization)
+
+**¿Cuándo usarlos?** --> cuando tenemos data simétrica o uniformemente distribuida
+
+
 ## Transformación no lineal
 ## Procesamiento de datos numéricos en Python
 ## Pipelines de procesamiento para variables categóricas
