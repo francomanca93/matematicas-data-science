@@ -18,6 +18,7 @@
   - [Medidas de tendencia central en Python](#medidas-de-tendencia-central-en-python)
   - [Medidas de dispersion](#medidas-de-dispersion)
   - [Desviación estándar](#desviación-estándar)
+    - [Distribución normal](#distribución-normal)
   - [Medidas de dispersión en Python](#medidas-de-dispersión-en-python)
   - [Exploración visual de los datos](#exploración-visual-de-los-datos)
   - [Diagramas de dispersión en el análisis de datos](#diagramas-de-dispersión-en-el-análisis-de-datos)
@@ -213,6 +214,62 @@ Las medidas de dispersión, también llamadas medidas de variabilidad, muestran 
 ![representacion-rango-q](https://imgur.com/FmA5v7p.png)
 
 ## Desviación estándar
+
+- **Desviación estándar**: es la medida de dispersión más común, que indica qué tan dispersos están los datos con respecto a la media. Mientras mayor sea la desviación estándar, mayor será la dispersión de los datos.
+El símbolo **σ (sigma)** se utiliza frecuentemente para representar la desviación estándar de una **población**, mientras que **s** se utiliza para representar la desviación estándar de una **muestra**.
+La desviación estándar se puede utilizar para establecer un valor de referencia para estimar la variación general de un proceso.
+
+- **Varianza**: es una medida de dispersión que representa la variabilidad de una serie de datos respecto a su media. Formalmente se calcula como la suma de los residuos al cuadrado divididos entre el total de observaciones. Su fórmula es la siguiente:
+X → Variable sobre la que se pretenden calcular la varianza
+xi → Observación número i de la variable X. i puede tomará valores entre 1 y n.
+n → Número de observaciones.
+x̄ → Es la media de la variable X.
+
+![std-var](https://imgur.com/LEmWuz3.png)
+
+La diferencia entre la desviación estándar o típica y la varianza, es que la la desviación típica es la raíz cuadrada de la varianza
+
+Coeficiente de variación:
+
+Su cálculo se obtiene de dividir la desviación típica entre el valor absoluto de la media del conjunto y por lo general se expresa en porcentaje para su mejor comprensión.
+
+X → Variable sobre la que se pretenden calcular la varianza
+σx → Desviación típica de la variable X.
+| x̄ | → Es la media de la variable X en valor absoluto con x̄ ≠ 0
+El coeficiente de variación de utiliza para comparar la dispersión (variación) de conjuntos de datos de medidas diferentes o con medias aritméticas diferentes.
+
+### Distribución normal
+
+![dis-norm](https://imgur.com/stpXERG.png)
+
+¿Qué implicaciones tiene la desviación estándar en una distribución de datos?
+
+![dis-norm2](https://imgur.com/4cFWQ0w.png)
+
+Normalmente en los extremos se ponen los valores mínimos y máximos, pero esto se puede ajustar para excluir a los datos atípicos (*outliers*).
+
+Usando la **desviación estándar** se puede dividir a la distribución normal en varias partes.
+
+A tres veces la \sigma a ambos lados de la media se concentra el 99.73% de los datos. Esto es relevante porque con base en eso podemos decir que a más de 3 veces \sigma se encontrarían los datos atípicos en el caso de la distribución normal.
+
+Como se definen los outliers en términos del IQR:
+
+- **Límite inferior:** ($\text{Q1} - 1.5 * \text{IQR}$)
+- **Límite superior:** ($\text{Q3} + 1.5 * \text{IQR}$)
+
+Cualquier dato menor que el límite inferior o mayor que el límite superior se considera un valor atípico. Esto se puede identificar usando un diagrama de caja y brazos con los límites definidos.
+
+**Distribución sesgada**
+![dis-sesgada](https://imgur.com/gnHpohG.png)
+
+Se definen los límites de la siguiente manera:
+
+- **Límite inferior: $Q_1-1.5*f(\text{IQR})$**
+- **Límite superior: $Q_3+1.5*g(\text{IQR})$**
+
+Donde $f$ y $g$ son una función cualquiera que dependa del rango intercuartil.
+
+
 ## Medidas de dispersión en Python
 ## Exploración visual de los datos
 ## Diagramas de dispersión en el análisis de datos
