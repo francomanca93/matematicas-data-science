@@ -290,8 +290,29 @@ Una mayor curtosis no implica una mayor varianza, ni viceversa.
 
 [Curtosis explicada en detalle](https://www.youtube.com/watch?v=gt6bpsGGp44)
 
-
 ## Exploración visual de los datos
+
+La estadística descriptiva se divide en 2 bloques:
+• **El analítico**: medidas de tendencia central y medidas de dispersión
+• **La gráfica**: diagramas de caja, histogramas, entre otros
+
+La gráfica, el tipo de visualización, a usar depende de la situación a describir ( pastel por ejemplo para para votaciónes, de dispersión para ver correlaciones, etc.)
+
+La siguiente app web nos muestra los tipos de visualización y una explicación de ellos:
+
+> EXCELENTE PÁGINA --> [DataVizProject](https://datavizproject.com/)
+
+Entre graficas comunes tenemos:
+
+- Pastel o donut
+- Barras apiladas
+- Radiales
+- De dispersión
+
+Hasta ahora hemos realizado análisis univariado: analizar la media, la mediana, etc. De una columna de un conjunto de datos. Hemos visto como se comporta una variable numérico respecto a una categórica.
+
+En la siguiente seccion trabajaremos para observar como se comporta una variable numérica respecto a otra numerica por lo cual usaremos las gráficas de dispersión que ayudan a visualizar la correlación. Correlación es un concepto a usar con mucho cuidado.
+
 ## Diagramas de dispersión en el análisis de datos
 
 # Estadística en la ingesta de datos
