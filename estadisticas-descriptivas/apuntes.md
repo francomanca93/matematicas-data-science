@@ -26,7 +26,7 @@
 - [Estadística en la ingesta de datos](#estadística-en-la-ingesta-de-datos)
   - [Pipelines de procesamiento para variables numéricas](#pipelines-de-procesamiento-para-variables-numéricas)
     - [Escalamiento lineal (Normalización)](#escalamiento-lineal-normalización)
-  - [Transformación no lineal](#transformación-no-lineal)
+    - [Transformación no lineal](#transformación-no-lineal)
   - [Procesamiento de datos numéricos en Python](#procesamiento-de-datos-numéricos-en-python)
   - [Pipelines de procesamiento para variables categóricas](#pipelines-de-procesamiento-para-variables-categóricas)
   - [Procesamiento para variables categóricas con Python](#procesamiento-para-variables-categóricas-con-python)
@@ -376,7 +376,34 @@ $$x_s=\frac{x-\mu}{\sigma}$$
 **¿Cuándo usarlos?** --> cuando tenemos data simétrica o uniformemente distribuida
 
 
-## Transformación no lineal
+### Transformación no lineal
+
+> Pipeline: Distribucion simetrica? No --> Aplico transformacion no lineal --> Aplico escalamiento lineal
+
+**¿Por qué usarlos?**
+En el caso donde haya datos fuertemente sesgados y no simétricos.
+
+**¿Cual es el efecto que tiene?** - **Algunos tipos**:
+
+- **Tanh**: Puedo agarrar los valores de una columna y aplicarle la funcion `f(x) = tanh(x)`. El efecto que tendría sobre los datos sesgado se puede visualizar en la siguiente imagen, generando una distribución normal corrigiendo la distribución sesgada.
+
+![tnl-tanh](https://imgur.com/2P5fu6z.png)
+
+Puedo variar la forma de la distribución con un parametro `a` que me aplana mas o menos la curva de distribución
+![tnl-tanh2](https://imgur.com/adKW3Vo.png)
+
+- **Monomios o polinomios**: Podemos aplicar una transformacion no lineal usando `f(x) = x ^ 1/2` o raiz cuadrada. La transformación seria como se ve en la imagen.
+
+![tnl-raiz2](https://imgur.com/T4yellj.png)
+
+- **Logística**
+- **LogNormal**
+- Las formulas de estas transformaciones se pueden encontrar en Numpy
+
+**¿Cuándo usarlos?**
+Justo antes de aplicar el escalamiento lineal, las transformaciones no lineales solo son para que nuestros datos queden lineales para luego aplicar la normalización lineal. Siempre se debe aplicar la normalización lineal.
+
+
 ## Procesamiento de datos numéricos en Python
 ## Pipelines de procesamiento para variables categóricas
 ## Procesamiento para variables categóricas con Python
