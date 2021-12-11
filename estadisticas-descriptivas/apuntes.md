@@ -315,6 +315,8 @@ En la siguiente seccion trabajaremos para observar como se comporta una variable
 
 ## Diagramas de dispersión en el análisis de datos
 
+Notebook realizando diagramas de dispersión para usos de análisis de datos en Python --> [[clase-12]Visualizaciones](clases_notebooks/[clase-12]Visualizaciones.ipynb)
+
 # Estadística en la ingesta de datos
 
 ## Pipelines de procesamiento para variables numéricas
