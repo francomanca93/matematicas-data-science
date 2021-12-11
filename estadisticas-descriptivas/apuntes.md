@@ -141,6 +141,29 @@ Este tipo de datos no se puede medir, pero se pueden contar. Básicamente repres
 
 
 ## Medidas de tendencia central
+
+Son medidas que nos ayudan a resumir una gran cantidad de información en un solo numero.
+
+- **Media**: Es el promedio de todos los datos, puede ser susceptible a valores atípicos. La media a su vez puede ser:
+  - **Media aritmética o promedio**: Es la suma de un conjunto de valores entre el número de observaciones.
+  - **Media ponderada**: es una medida de tendencia central, *que es apropiada cuando en un conjunto de datos cada uno de ellos tiene una importancia relativa (o peso) respecto de los demás datos.* Se obtiene multiplicando cada uno de los datos por su ponderación (peso) para luego sumarlos, obteniendo así una suma ponderada; después se divide esta entre la suma de los pesos, dando como resultado la media ponderada.
+  - **Media armónica**: La media armónica es igual al número de elementos de un grupo de cifras entre la suma de los inversos de cada una de estas cifras.
+  En otras palabras, la media armónica es una medida estadística *recíproca a la media aritmética*.
+  - **Media geométrica**: es una cantidad arbitraria de números (por decir n números) es la raíz n-ésima del producto de todos los números; *es recomendada para datos de progresión geométrica, para promediar razones, interés compuesto y números índice*.
+- **Mediana**: es el dato central es decir tiene la misa cantidad de datos a su izquierda y derecha, no es lo mismo que la media.
+- **Moda**: es el dato que mas se repite, la moda no aplica para datos numéricos continuos
+
+**Diagrama de frecuencia**
+
+Es la representación grafica asociada a la tabla de frecuencia, normalmente todos los estadísticos descriptivos discretos se pueden representar en términos de esta distribución.
+Los pasos para obtener los valores son:
+
+1. Seleccionar una columna con tipo de datos discretos.
+2. Sacar la cantidad de veces que aparece cada valor, guardaremos este dato en una columna llamada **frecuencia**, ya que es la frecuencia con la que aparece cada dato.
+3. Graficamos un diagrama de barras llamada diagrama de frecuencia donde `la altura de la barra es la frecuencia` y el `tipo de dato discreto es el label de cada columna`.
+
+![diagrama-de-frecuencia](https://imgur.com/miKIn32.png)
+
 ## Metáfora de Bill Gates en un bar
 ## Medidas de tendencia central en Python
 ## Medidas de dispersion
