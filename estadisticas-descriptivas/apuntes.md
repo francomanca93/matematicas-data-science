@@ -11,6 +11,8 @@
 - [Estadística descriptiva para analítica](#estadística-descriptiva-para-analítica)
   - [¿Cómo usar Deepnote?](#cómo-usar-deepnote)
   - [Tipos de datos](#tipos-de-datos)
+    - [Datos categóricos](#datos-categóricos)
+    - [Datos numéricos](#datos-numéricos)
   - [Medidas de tendencia central](#medidas-de-tendencia-central)
   - [Metáfora de Bill Gates en un bar](#metáfora-de-bill-gates-en-un-bar)
   - [Medidas de tendencia central en Python](#medidas-de-tendencia-central-en-python)
@@ -108,6 +110,36 @@ Sabemos y tenemos bien claro que la estadística descriptiva es súper común, p
 ](https://platzi.com/blog/deepnote/)
 
 ## Tipos de datos
+
+Notebook de la clase: [[clase-04]tipos-de-datos](clases_notebooks/[clase-04]tipos-de-datos.ipynb)
+
+### Datos categóricos
+
+Los datos categóricos también conocidos como datos cualitativos, representan características como el género, el idioma, etc. de una persona o caracteristicas de un objeto. También pueden tomar valores numéricos, por ejemplo: 1 para mujeres y 0 para hombres. Hay que tener en cuenta que esos números no tienen significado matemático.
+
+Los tipos de datos estadísticos categóricos se clasifican en:
+
+- **Datos nominales**: Otros de los tipos de datos estadísticos son los que tienen valores nominales que representan unidades discretas y se usan para etiquetar variables que no tienen un valor cuantitativo.
+Estos datos no tienen un orden, aunque cambiara el orden de sus valores, no cambia su significado. Ejemplo: Tenemos 3 clases de coches y cada uno lo podemos representar con un numero `--> - 1: Subaru - 2:Ford - 3: Tesla` y da lo mismo el orden de estos, no importará si sabemos que significa cada numero.
+- **Datos ordinales**: Los datos ordinales representan unidades discretas y ordenadas. Por lo tanto, es casi lo mismo que los datos nominales, excepto que su orden es importante.
+Las escalas ordinales generalmente, se usan para medir características no numéricas como la `felicidad, la satisfacción del cliente, etc.`
+
+### Datos numéricos
+
+Estos tipos de datos estadísticos también se conocen como datos cuantitativos, y se refieren a una medida o recuento. Se clasifican de la siguiente manera:
+
+- **Datos discretos**: Los datos estadísticos son discretos cuando sus valores son distintos y separados. Es decir, cuando los datos sólo pueden tomar ciertos valores.
+Este tipo de datos no se puede medir, pero se pueden contar. Básicamente representan información que se puede clasificar.
+- **Datos continuos**: Los datos continuos representan mediciones y, por lo tanto, sus valores. no se pueden contar, pero se pueden medir. A su vez, estos se clasifican de la siguiente manera:
+  - **Datos de intervalo**: Los datos de intervalo representan unidades ordenadas que tienen la misma diferencia . Por lo tanto, hablamos de datos de intervalo cuando tenemos una variable que contiene valores numéricos que están ordenados y donde conocemos las diferencias exactas entre los valores. El problema con los datos de valores de intervalo es que podemos sumar y restar, pero no podemos multiplicar, dividir o calcular razones. Debido a que no existe un cero verdadero, no se pueden aplicar muchas estadísticas descriptivas e inferenciales.
+  - **Datos de relación**: También son unidades ordenadas que tienen la misma diferencia. Los datos de relación son los mismos que los valores de intervalo, con la diferencia de que tienen un cero absoluto.
+
+
+> En **pandas** cuando analizamos las variables nos encontramos los datos pueden tener un tipo segun el tipo de dato estadistico:
+> * Categoricos: `object`, `bool`
+> * Numéricos: `int64` (discreto), `float64` (contínuo)
+
+
 ## Medidas de tendencia central
 ## Metáfora de Bill Gates en un bar
 ## Medidas de tendencia central en Python
