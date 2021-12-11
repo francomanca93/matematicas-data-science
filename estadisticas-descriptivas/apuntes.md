@@ -192,6 +192,9 @@ Por lo tanto deberemos tener en cuenta la mediana tambien cuando sepamos o sospe
 - Ejemplo: Por esto hablar del ingreso per cápita de un país es equivocado si no lo acompañamos con otros indices que nos midan la distribucion de la riqueza, como por ejemplo el indice de Gini o nos aportan el valor de la mediana para sacar nuestras conclusiones.
 
 ## Medidas de tendencia central en Python
+
+Notebook ejercitando los conceptos medidas de tendencia central en Python --> [[clase-07]medidas-central](clases_notebooks/[clase-07]medidas-central.ipynb)
+
 ## Medidas de dispersion
 ## Desviación estándar
 ## Medidas de dispersión en Python
