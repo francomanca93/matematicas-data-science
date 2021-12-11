@@ -405,6 +405,9 @@ Justo antes de aplicar el escalamiento lineal, las transformaciones no lineales 
 
 
 ## Procesamiento de datos numéricos en Python
+
+Notebook aplicando transformaciones lineales y no lineales en Python --> [[clase-15]Procesamiento-datos-numericos](clases_notebooks/[clase-15]Procesamiento-datos-numericos.ipynb)
+
 ## Pipelines de procesamiento para variables categóricas
 ## Procesamiento para variables categóricas con Python
 ## Correlaciones
