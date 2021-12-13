@@ -409,6 +409,17 @@ Justo antes de aplicar el escalamiento lineal, las transformaciones no lineales 
 Notebook aplicando transformaciones lineales y no lineales en Python --> [[clase-15]Procesamiento-datos-numericos](clases_notebooks/[clase-15]Procesamiento-datos-numericos.ipynb)
 
 ## Pipelines de procesamiento para variables categóricas
+
+> Pipeline: Tipo de variable? Categorica --> Hacer mapeo numérico --> Numero de valores < 15 --> One-hot. De lo contrario usa Dummy .
+
+- **Dummy** : es la representación más compacta que se puede tener de los datos. Es mejor usarla cuando los inputs son variables linealmente independientes (no tienen un grado de correlación significativo). Es decir, las cuando se sabe que las categorías son independientes entre sí.
+- **One-hot** : es más extenso. Permite incluir categorías que no estaban en el dataset inicialmente. De forma que si se filtra una categoría que no estaba incluida, igual se pueda representar numéricamente y no de error en el modelo.
+
+> [Categorical Variables](https://www.kaggle.com/alexisbcook/categorical-variables) --> One-hot encoding generally does not perform well if the categorical variable takes on a large number of values (i.e., you generally won’t use it for variables taking more than 15 different values).
+
+> [Strategies for working with discrete, categorical data](https://towardsdatascience.com/understanding-feature-engineering-part-2-categorical-data-f54324193e63)
+
+
 ## Procesamiento para variables categóricas con Python
 ## Correlaciones
 ## Matriz de covarianza
