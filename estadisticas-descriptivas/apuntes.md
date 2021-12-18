@@ -426,6 +426,35 @@ Notebook aplicando procesamiento para variables categóricas en Python --> [[cla
 Aplicat One-hot encoding inplica crear nuevas variables que antes no existian, lo que generará que perdamos rendimiento a la hora entrenar a nuestro algoritmo. La mejor forma de reducir variables que no se utilicen realmente es hacer un analisis de correlación y de componentes principales.
 
 ## Correlaciones
+
+¿Qué es correlación?
+
+- **Correlación:** la correlación es una medida estadística que expresa hasta qué punto dos variables están relacionadas linealmente (esto es, cambian conjuntamente a una tasa constante).
+
+¿Por qué es importante la correlación?
+
+- Si se tienen 2 variables que están correlacionadas entre sí, no tiene sentido incluir ambas variables en un modelo de ML porque probablemente las 2 van a aportar la misma información si la correlación es muy alta. En ese caso se elimina a una de las 2, básicamente en eso consiste la *reducción de datos.*
+
+¿Qué es la covarianza?
+
+- **Covarianza:** es un valor que indica el grado de variación conjunta de dos variables aleatorias respecto a sus medias
+
+    $$\text{covarianza}=\frac{1}{n-1}\sum_{i=1}^n(x_i-\bar{x})(y_i-\bar{y})$$
+
+¿Qué es el coeficiente de correlación?
+
+- **Coeficiente de correlación:** es la medida específica que cuantifica la intensidad de la relación lineal entre dos variables en un análisis de correlación.
+
+    $$\rho=\frac{\text{covarianza}}{\text{std(x)std(y)}}$$
+
+![coefi-corre](https://imgur.com/6s39d78.png)
+
+- Si las variables tienen un **coeficiente de correlación muy alto** las variables tienen una **correlación muy elevada.**
+- Si el **coeficiente de correlación es muy bajo** las variables tienen una **correlación muy baja.**
+
+![coefi-corre2](https://imgur.com/Bxra0H7.png)
+> Siempre debemos considerar que: Correlación no implica causalidad.  
+
 ## Matriz de covarianza
 
 # Proyecto de aplicación
