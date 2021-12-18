@@ -419,8 +419,12 @@ Notebook aplicando transformaciones lineales y no lineales en Python --> [[clase
 
 > [Strategies for working with discrete, categorical data](https://towardsdatascience.com/understanding-feature-engineering-part-2-categorical-data-f54324193e63)
 
-
 ## Procesamiento para variables categóricas con Python
+
+Notebook aplicando procesamiento para variables categóricas en Python --> [[clase-17]Procesamiento-datos-categoricos](clases_notebooks/[clase-17]Procesamiento-datos-categoricos.ipynb)
+
+Aplicat One-hot encoding inplica crear nuevas variables que antes no existian, lo que generará que perdamos rendimiento a la hora entrenar a nuestro algoritmo. La mejor forma de reducir variables que no se utilicen realmente es hacer un analisis de correlación y de componentes principales.
+
 ## Correlaciones
 ## Matriz de covarianza
 
