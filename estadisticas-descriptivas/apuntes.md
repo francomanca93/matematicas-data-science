@@ -457,6 +457,14 @@ Aplicat One-hot encoding inplica crear nuevas variables que antes no existian, l
 
 ## Matriz de covarianza
 
+Una matriz de varianzas-covarianzas es una matriz cuadrada que contiene las varianzas y covarianzas asociadas con diferentes variables. Los elementos de la diagonal de la matriz contienen las varianzas de las variables, mientras que los elementos que se encuentran fuera de la diagonal contienen las covarianzas entre todos los pares posibles de variables.
+
+![matriz-cov](https://imgur.com/DLHIDzO.png)
+
+![matriz-cov2](https://imgur.com/rapcqeI.png)
+
+Notebook haciendo estudio con matriz de covarianza en Python --> [[clase-19]matriz-covarianza](clases_notebooks/[clase-19]matriz-covarianza.ipynb)
+
 # Proyecto de aplicación
 
 ## Cálculo de valores propios de una matriz
