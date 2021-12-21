@@ -33,9 +33,8 @@
   - [Correlaciones](#correlaciones)
   - [Matriz de covarianza](#matriz-de-covarianza)
 - [Proyecto de aplicación](#proyecto-de-aplicación)
-  - [Cálculo de valores propios de una matriz](#cálculo-de-valores-propios-de-una-matriz)
-  - [PCA: análisis de componentes principales](#pca-análisis-de-componentes-principales)
-  - [Reducción de dimensionalidad con PCA](#reducción-de-dimensionalidad-con-pca)
+  - [Reducción de dimensionalidad con PCA (análisis de componentes principales)](#reducción-de-dimensionalidad-con-pca-análisis-de-componentes-principales)
+  - [Conclusión](#conclusión)
 
 # ¿Para qué sirve la estadística descriptiva?
 ## Estadística descriptiva vs. inferencial
@@ -467,6 +466,24 @@ Notebook haciendo estudio con matriz de covarianza en Python --> [[clase-19]matr
 
 # Proyecto de aplicación
 
-## Cálculo de valores propios de una matriz
-## PCA: análisis de componentes principales
-## Reducción de dimensionalidad con PCA
+## Reducción de dimensionalidad con PCA (análisis de componentes principales)
+
+Notebook aplicando reducción de dimensionalidad con PCA en Python --> [[clase-22]PCA](clases_notebooks/[clase-22]PCA.ipynb)
+
+## Conclusión
+
+**Visión de la estadística descriptiva:** Resumir información con números y con visualizaciones
+
+La estadística descriptiva nos permite trabajar con **2 bloques fundamentales de la ciencia de datos**:
+
+- El análisis exploratorio de datos.
+- En el procesamiento de la información, antes de pasar al modelo de Machine Learning.
+
+**¿Por qué es tan importante el procesamiento de datos?** 
+
+El procesamiento de datos es muy importante para que todo tenga un formato estandarizado (**escalamiento**) para que sea de fácil entendimiento para un modelo de Machine Learning. 
+
+
+Sabiendo eso, las correlaciones son fundamentales para ver que variables tienen una alta relación y de ahí evidenciar que puede haber variables que pueden resultan redundantes para el modelo.
+
+Y como conclusión final vimos la **técnica PCA**: el análisis de componentes principales es una técnica utilizada para describir un conjunto de datos en términos de nuevas variables no correlacionadas. PCA es para reducir la cantidad de datos. Puedo preparar los datos crudos a un solo formato numerico y ese formato numerico que tenga la menor cantidad de informacion, pero la suficiente para que nuestro algoritmo pueda funcionar bien y pueda hacer predicciones que sigan representando lo que los datos originales estaban mostrandome, en termino de clasificacion, prediccion con regresiones.
